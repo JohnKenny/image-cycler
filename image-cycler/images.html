@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images Cycler</title>
+    <script>
+    // change to var...    
+    let imgs = ["./img1.jpg", "./img2.jpg", "./img3.jpg"];
+    let counter = 0;
+    function run(){
+        setInterval(cycle, 4000);
+    }
+    function cycle(){
+        counter++;
+        if(counter == imgs.length) counter = 0;
+        document.getElementById("image").src = imgs[counter];
+    }
+    </script>
+</head>
+<body onload="run();">
+    <img id="image" src="img1.jpg" alt="image" >
+</body>
+</html>
